@@ -1,0 +1,8 @@
+version: '2.3'
+services:
+  keydb:
+    image: redis
+    hostname: keydb
+    ports:
+      - "6379:6379"
+    command: ["--stop-writes-on-bgsave-error", "no", "--protected-mode", "no"]
